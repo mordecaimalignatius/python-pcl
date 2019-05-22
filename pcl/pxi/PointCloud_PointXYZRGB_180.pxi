@@ -306,10 +306,11 @@ cdef class PointCloud_PointXYZRGB:
         """
         Return a pcl.StatisticalOutlierRemovalFilter object with this object set as the input-cloud
         """
-        fil = StatisticalOutlierRemovalFilter_PointXYZRGB()
-        cdef pclfil.StatisticalOutlierRemoval_PointXYZRGB_t *cfil = <pclfil.StatisticalOutlierRemoval_PointXYZRGB_t *>fil.me
-        cfil.setInputCloud(<cpp.shared_ptr[cpp.PointCloud[cpp.PointXYZRGB]]> self.thisptr_shared)
-        return fil
+        #fil = StatisticalOutlierRemovalFilter_PointXYZRGB()
+        #cdef pclfil.StatisticalOutlierRemoval_PointXYZRGB_t *cfil = <pclfil.StatisticalOutlierRemoval_PointXYZRGB_t *>fil.me
+        #cfil.setInputCloud(<cpp.shared_ptr[cpp.PointCloud[cpp.PointXYZRGB]]> self.thisptr_shared)
+        #return fil
+        return StatisticalOutlierRemovalFilter_PointXYZRGB(self)
 
     def make_voxel_grid_filter(self):
         """
