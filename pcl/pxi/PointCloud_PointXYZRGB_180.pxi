@@ -373,4 +373,3 @@ cdef class PointCloud_PointXYZRGB:
         
         return result
 ###
->>>>>>> upstream/master
